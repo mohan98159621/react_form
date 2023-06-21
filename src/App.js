@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React from 'react'
+import 'antd/dist/reset.css';
+import Contact from './component/Contact';
+import Login from './component/Login';
+
+import {Routes,Route} from 'react-router-dom'
+
+
 import './App.css';
+import Forgot from './component/Forgot';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+<Routes>
+<Route path='/'  element={< Login />}    ></Route>
+<Route path='/login'  element={< Contact />}    ></Route>
+<Route path='/forgot'  element={< Forgot />}    ></Route>
+
+
+
+</Routes>
+
+
+
+        
+
+    </>
   );
 }
 
